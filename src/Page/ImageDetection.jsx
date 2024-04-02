@@ -12,12 +12,13 @@ import { FloatButton, Spin } from "antd";
 import { useNavigate } from "react-router";
 import axios from "axios"; // Import axios for making HTTP requests
 
+
 const drawerWidth = 240;
 
 export default function ImageDetection() {
   const navigate = useNavigate();
   const [isDetecting, setIsDetecting] = React.useState(false);
-
+ 
   const handleDetectClick = async () => {
     try {
       setIsDetecting(true); // Show Spin component while detecting
@@ -72,7 +73,7 @@ export default function ImageDetection() {
             <div className="content" />
           </Spin>
         </div>
-        <Toolbar />
+        <Toolbar />    
         <FileUpload />
       </Box>
       <FloatButton
